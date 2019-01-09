@@ -18,7 +18,7 @@ def register(request):
 
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'billboard/index.html')
 
 
 

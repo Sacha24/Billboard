@@ -1,0 +1,106 @@
+.billboard {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Anton", "sans-serif";
+}
+
+.border {
+  border: 3px solid #00b7ef;
+  max-width: 800px;
+  max-height: 400px;
+  margin: auto;
+}
+
+.border_dashed {
+  border: 3px solid #00b7ef;
+  border-style: dashed;
+  max-width: 800px;
+  height: 250px;
+  margin: auto;
+}
+
+.date {
+  font-family: "Poiret One", cursive;
+  font-size: 16px;
+  color: black;
+}
+
+.title {
+  font-family: "Anton", sans-serif;
+  font-size: 30px;
+  color: #00b7ef;
+}
+
+.input_title {
+  margin-top: 15px;
+}
+
+.text {
+  font-size: 16px;
+  color: #c1bfc0;
+}
+
+textarea {
+  height: 150px;
+  width: 790px;
+  margin-top: 10px;
+}
+
+.signature {
+  font-family: "Pinyon Script", cursive;
+  font-size: 24px;
+  float: right;
+}
+
+.input_author {
+  margin-top: 10px;
+  float: right;
+}
+
+.new_model {
+  position: relative;
+  border: 1px solid black;
+  border-style: dashed;
+  height: 80px;
+  width: 830px;
+  margin: auto;
+  top: 20px;
+}
+
+.add_model {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  background-color: #66cdaa;
+  border-radius: 3px;
+  padding: 20px 50px;
+  left: calc(50% - 50px);
+  top: 10%;
+  cursor: pointer;
+}
+
+.cancel {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: red;
+  cursor: pointer;
+  padding: 20px 50px;
+  left: calc(50% - 120px);
+  top: 10%;
+  display: none
+}
+
+.validate {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #66CDAA;
+    cursor: pointer;
+    padding: 20px 50px;
+    left: 50%;
+    top: 10%;
+    display: none;
+  }

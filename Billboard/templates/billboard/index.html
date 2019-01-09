@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Billboard</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static '/billboard/css/style.css' %}" />
+  </head>
+  <body>
+    <h1 class="billboard">BILLBOARD</h1>
+    <div class="container">
+      <form>
+        <fieldset class="border">
+          <legend class="date">09/01/2019</legend>
+          <h1 class="title">Welcome to the bootcamp</h1>
+          <p class="text">
+            Lorem ipsum dolor sit amet, est ex corpora iracundia vulputate, eu
+            persius diceret deserunt mel, nam at eros omnis. No mel illum augue
+            argumentum, ludus epicuri sea ei. At etiam salutandi vel, sea
+            inermis vocibus cotidieque ea, eum te labores lobortis convenire.
+            Ius id elit altera appetere, case erant omittantur sit cu, in mel
+            tractatos dissentiet. Ius minimum officiis molestiae cu.
+          </p>
+          <div class="signature">Gilad</div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="new_model">
+      <button class="add_model"><i class="fas fa-plus"></i></button>
+      <button class="cancel"><i class="fas fa-times"></i></button>
+      <button class="validate"><i class="fas fa-check"></i></button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static '/billboard/js/script.js' %}"></script>
+  </body>
 </html>

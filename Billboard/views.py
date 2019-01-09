@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from .models import Model
 
 
 def register(request):
@@ -18,7 +19,11 @@ def register(request):
 
 @login_required
 def index(request):
-    return render(request, 'billboard/index.html')
-
-
-
+    result = Model.objects.all()
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        message = request.POST.get('message')
+        author = request.POST.get('author')
+        model = Model(title=title, message=message, author=author)
+        model.save()
+    return render(request, 'billboard/index.html', {'result': result})

@@ -4,6 +4,12 @@
   font-family: "Anton", "sans-serif";
 }
 
+.no_message {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
 .border {
   border: 3px solid #00b7ef;
   max-width: 800px;
@@ -89,18 +95,18 @@ textarea {
   padding: 20px 50px;
   left: calc(50% - 120px);
   top: 10%;
-  display: none
+  display: none;
 }
 
 .validate {
-    position: absolute;
-    color: white;
-    font-size: 16px;
-    border-radius: 3px;
-    background-color: #66CDAA;
-    cursor: pointer;
-    padding: 20px 50px;
-    left: 50%;
-    top: 10%;
-    display: none;
-  }
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #66cdaa;
+  cursor: pointer;
+  padding: 20px 50px;
+  left: 50%;
+  top: 10%;
+  display: none;
+}

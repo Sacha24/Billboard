@@ -133,3 +133,5 @@ LOGIN_URL = '/login/'
 
 LOGOUT_REDIRECT_URL = '/login/'
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+

@@ -3,6 +3,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .models import Model
+import datetime
 
 
 def register(request):
@@ -20,10 +21,11 @@ def register(request):
 @login_required
 def index(request):
     result = Model.objects.all()
+    date = datetime.date.today()
     if request.method == 'POST':
         title = request.POST.get('title')
         message = request.POST.get('message')
         author = request.POST.get('author')
         model = Model(title=title, message=message, author=author)
         model.save()
-    return render(request, 'billboard/index.html', {'result': result})
+    return render(request, 'billboard/index.html', {'result': result, 'date': date})

@@ -9,8 +9,11 @@ function new_model() {
   fieldset.className = "border_dashed";
 
   var legend = document.createElement("legend");
+  var d = new Date();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  d = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
   legend.className = "date";
-  legend.innerHTML = "09/01/2019";
+  legend.innerHTML = d;
 
   var title = document.createElement("input");
   title.className = "input_title";
@@ -58,7 +61,6 @@ function validate_model() {
 }
 $(".validate").on("click", validate_model);
 
-
 $(".validate").click(function(e) {
   e.preventDefault();
   var data = {
@@ -69,6 +71,6 @@ $(".validate").click(function(e) {
   $.ajax({
     type: "POST",
     data: data,
-    dataType: "json",
+    dataType: "json"
   });
 });

@@ -13,7 +13,7 @@ def register(request):
         if form.is_valid():
             new_user = form.save()
             login(request, new_user)
-            return index(request)
+            return (request)
     else:
         form = UserCreationForm()
     return render(request, "registration/register.html", {"form": form})
@@ -24,10 +24,12 @@ def register(request):
 def index(request):
     result = Model.objects.all()
     date = datetime.date.today()
+    if request.user.is_authenticated():
+        username = request.user.username
     if request.method == 'POST':
         title = request.POST.get('title')
         message = request.POST.get('message')
         author = request.POST.get('author')
         model = Model(title=title, message=message, author=author)
         model.save()
-    return render(request, 'billboard/index.html', {'result': result, 'date': date})
+    return render(request, 'billboard/index.html', {'result': result, 'date': date, 'username': username})

@@ -39,17 +39,17 @@ function new_model() {
   para.setAttribute("placeholder", "Your message here ...");
   para.setAttribute("name", "message");
 
-  var signature = document.createElement("input");
+/*   var signature = document.createElement("input");
   signature.className = "input_author";
   signature.setAttribute("type", "text");
   signature.setAttribute("placeholder", "Author");
-  signature.setAttribute("name", "author");
+  signature.setAttribute("name", "author"); */
 
   form.appendChild(fieldset);
   fieldset.appendChild(legend);
   fieldset.appendChild(title);
   fieldset.appendChild(para);
-  fieldset.appendChild(signature);
+/*   fieldset.appendChild(signature); */
   $(".container").append(form);
 
   $(".add_model").css("display", "none");
@@ -69,8 +69,8 @@ $(".cancel").on("click", cancel_model);
 function validate_model(e) {
   if (
     $(".input_title").val() === "" ||
-    $(".TA").val() === "" ||
-    $(".input_author").val() === ""
+    $(".TA").val() === "" /* ||
+    $(".input_author").val() === "" */
   ) {
     alert("All fields are mandatory !");
     e.preventDefault()

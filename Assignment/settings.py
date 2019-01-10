@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import django_heroku
+
+django_heroku.settings(locals())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -77,10 +80,10 @@ WSGI_APPLICATION = 'Assignment.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME': 'Billboard',
-        'USER': 'root',
-        'PASSWORD': 'rebecca09',
-        'HOST': 'localhost',
+        'NAME': 'team3db',
+        'USER': 'user_user',
+        'PASSWORD': 'user_user',
+        'HOST': 'db4free.net',
         'PORT': '3306',
     }
 }
@@ -129,3 +132,4 @@ LOGIN_REDIRECT_URL = '/billboard/'
 LOGIN_URL = '/login/'
 
 LOGOUT_REDIRECT_URL = '/login/'
+

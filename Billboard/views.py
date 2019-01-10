@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 from .models import Model
 import datetime
 
@@ -19,6 +20,7 @@ def register(request):
 
 
 @login_required
+@csrf_exempt
 def index(request):
     result = Model.objects.all()
     date = datetime.date.today()

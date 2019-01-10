@@ -26,9 +26,8 @@
         <div>No messages...</div>
         <div>Click the '+' button to add a new message</div>
       </div>
-      {% endif %}
-      {% for model in result %}
-      <form>
+      {% endif %} {% for model in result %}
+      <form action="/billboard" method="POST">
         <fieldset class="border">
           <legend class="date">{{ date }}</legend>
           <h1 class="title">{{ model.title }}</h1>

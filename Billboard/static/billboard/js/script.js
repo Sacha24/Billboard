@@ -10,8 +10,21 @@ function new_model() {
 
   var legend = document.createElement("legend");
   var d = new Date();
-  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  d = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  d = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
   legend.className = "date";
   legend.innerHTML = d;
 
@@ -53,24 +66,19 @@ function cancel_model() {
 }
 $(".cancel").on("click", cancel_model);
 
-function validate_model() {
-  $(".add_model").css("display", "block");
-  $(".cancel").css("display", "none");
-  $(".validate").css("display", "none");
-  $(".model_inCreation").removeClass();
+function validate_model(e) {
+  if (
+    $(".input_title").val() === "" ||
+    $(".TA").val() === "" ||
+    $(".input_author").val() === ""
+  ) {
+    alert("All fields are mandatory !");
+    e.preventDefault()
+  } else {
+    $(".add_model").css("display", "block");
+    $(".cancel").css("display", "none");
+    $(".validate").css("display", "none");
+    $(".model_inCreation").removeClass();
+  }
 }
 $(".validate").on("click", validate_model);
-
-$(".validate").click(function(e) {
-  e.preventDefault();
-  var data = {
-    title: $(".input_title").val(),
-    message: $(".TA").val(),
-    author: $(".input_author").val()
-  };
-  $.ajax({
-    type: "POST",
-    data: data,
-    dataType: "json"
-  });
-});

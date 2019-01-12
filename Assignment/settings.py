@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'Billboard.apps.BillboardConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_HOST = 'https://thawing-savannah-93389.herokuapp.com/' if not DEBUG else ''
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),

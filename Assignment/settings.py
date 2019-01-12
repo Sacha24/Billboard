@@ -126,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_HOST = 'https://thawing-savannah-93389.herokuapp.com/' if not DEBUG else ''
+STATIC_HOST = 'https://thawing-savannah-93389.herokuapp.com/billboard/' if not DEBUG else ''
 STATIC_URL = STATIC_HOST + '/static/'
 
 STATICFILES_DIRS = (

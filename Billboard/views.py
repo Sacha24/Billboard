@@ -24,7 +24,7 @@ def register(request):
 def index(request):
     result = Model.objects.all()
     date = datetime.date.today()
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         username = request.user.username
     if request.method == 'POST':
         title = request.POST.get('title')
